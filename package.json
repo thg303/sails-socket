@@ -1,0 +1,25 @@
+{
+  "name": "sails-socket",
+  "version": "1.0.0",
+  "description": "simple promise base socket for sails js",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thg303/sails-socket.git"
+  },
+  "author": "Ali Ghanavatian",
+  "license": "ISC",
+  "dependencies": {
+    "sails.io.js": "^1.1.12",
+    "socket.io-client": "^2.0.3"
+  },
+  "devDependencies": {
+    "@thg303/standard": "^10.0.2"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  }
+}
