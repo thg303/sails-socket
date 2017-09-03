@@ -1,11 +1,11 @@
 {
   "name": "sails-socket",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "simple promise base socket for sails js",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "standard",
-	"build": "webpack --config ./webpack.config.js",
+    "build": "node node_modules/babel-cli/bin/babel src --out-dir lib --presets es2015,stage-2",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -19,7 +19,13 @@
     "socket.io-client": "^2.0.3"
   },
   "devDependencies": {
-    "@thg303/standard": "^10.0.2"
+    "@thg303/standard": "^10.0.2",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
   },
   "standard": {
     "parser": "babel-eslint"
