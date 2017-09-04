@@ -4,9 +4,9 @@ import sailsIOClient from 'sails.io.js'
 export default class SailsSocket {
   static activeSocket = null
 
-  static connect (url) {
+  static connect (sailsParams = {}) {
     let io = sailsIOClient(socketIOClient)
-    io.sails.url = url
+    Object.keys(sailsParams).map(key => (io.sails[key] = sailsParams[key]))
     SailsSocket.activeSocket = io
     return io
   }

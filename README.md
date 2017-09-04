@@ -30,8 +30,10 @@ connect, disconnect, get, post, put, delete, request, on, off, setHeader
 ### connect
 It has to be called before using any other functions, it would throw an error if there was already another socket connection. 
 ```
-socket = SailsSocket.connect('url')
+const initializeParams = {url: 'http://sails-server.com/'}
+socket = SailsSocket.connect(initializeParams)
 ```
+`initializeParams` can be any `sails` configuration option as an objec like **url**, **transports**, **headers** and etc. see [sails documentations](http://sailsjs.com/documentation/reference/web-sockets/socket-client/io-sails) for more details.
 it returns the created socket. although it can be accessible later via static `SailsSocket.activeSocket` property.
 
 ### disconnect

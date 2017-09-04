@@ -1,6 +1,6 @@
 {
   "name": "sails-socket",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "simple promise base socket for sails js",
   "main": "lib/index.js",
   "scripts": {
